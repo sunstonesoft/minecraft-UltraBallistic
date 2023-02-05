@@ -70,8 +70,6 @@ public final class main extends JavaPlugin {
 					
 					rockets = rockets + 1;
 					
-					
-					
 					getConfig().set(String.format("rockets.%s", player.getUniqueId().toString()), rockets);
 					saveConfig();
 					player.sendMessage(String.format("You succesfully bought 1 rocket. Now you have %s rockets and your balance is %s!", rockets, econ.format(r.balance)));
@@ -103,15 +101,7 @@ public final class main extends JavaPlugin {
 			    
 				int rockets = (int) getConfig().get(String.format("rockets.%s", player.getUniqueId().toString()), 0);
 				
-				if (rockets < 1) {
-					player.sendMessage("You don't have enough rockets!");
-					return true;
-				}
-				
 				rockets = rockets - 1;
-				
-				getConfig().set(String.format("rockets.%s", player.getUniqueId().toString()), rockets);
-				saveConfig();
 				
 						
 
@@ -129,7 +119,6 @@ public final class main extends JavaPlugin {
 					int cycleY = 255;
 					
 					while (cycleY > loc.getY()) {
-						TimeUnit.SECONDS.sleep(1);
 						cycleY = cycleY - 1;
 						Location cycleLoc = new Location(world, x, cycleY, z);
 						world.spawnParticle(Particle.SMOKE_NORMAL, cycleLoc, 2);
