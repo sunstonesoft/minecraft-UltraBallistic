@@ -1,7 +1,7 @@
 name: UltraBallistic
-main: com.sunstonesoft.mc.UltraBallistic
+main: com.sunstonesoft.mc.UltraBallistic.main
 version: {$VersionNumber}
-author: SunStoneSoft team: TheLite, Vasia
+author: SunStoneSoft team, TheLite, Vasia
 commands:
    rockets:
       description: Sends the count of your rockets.
