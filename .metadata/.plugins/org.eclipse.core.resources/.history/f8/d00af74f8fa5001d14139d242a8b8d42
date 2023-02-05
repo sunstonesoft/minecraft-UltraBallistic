@@ -1,0 +1,15 @@
+name: UltraBallistic
+main: com.sunstonesoft.mc.UltraBallistic.main
+version: 0.0.1-SNAPSHOT
+author: SunStoneSoft team, TheLite, Vasia
+commands:
+   rockets:
+      description: Sends the count of your rockets.
+      usage: /rockets
+      permission: UltraBallistic.rockets
+      permission-message: You don't have permission.
+   buy_rocket:
+      description: Sends the count of your rockets.
+      usage: /buy_rocket
+      permission: UltraBallistic.buy_rocket
+      permission-message: You don't have permission.

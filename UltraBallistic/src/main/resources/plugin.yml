@@ -13,3 +13,8 @@ commands:
       usage: /buy_rocket
       permission: UltraBallistic.buy_rocket
       permission-message: You don't have permission.
+   launch_rocket:
+      description: Sends the count of your rockets.
+      usage: /launch_rocket <x> <z>
+      permission: UltraBallistic.launch_rocket
+      permission-message: You don't have permission.

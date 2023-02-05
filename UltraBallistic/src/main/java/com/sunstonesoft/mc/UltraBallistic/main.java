@@ -5,7 +5,9 @@ package com.sunstonesoft.mc.UltraBallistic;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
 
-
+import org.bukkit.Location;
+import org.bukkit.Particle;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -80,7 +82,72 @@ public final class main extends JavaPlugin {
 				
 			}
 			return true;
-		} //If this has happened the function will return true. 
+		}
+		if (cmd.getName().equalsIgnoreCase("launch_rocket")) { // If the player typed /basic then do the following, note: If you only registered this executor for one command, you don't need this
+			if (!(sender instanceof Player)) {
+				sender.sendMessage("This command can only be run by a player.");
+			} else {
+				Player player = (Player) sender;
+				
+				if (args.length > 1) {
+			        sender.sendMessage("Too many arguments!");
+			        return false;
+			    } 
+			    if (args.length < 1) {
+			        sender.sendMessage("Not enough arguments!");
+			        return false;
+			    }
+			    
+			    
+				int rockets = (int) getConfig().get(String.format("rockets.%s", player.getUniqueId().toString()), 0);
+				
+				rockets = rockets - 1;
+				
+						
+
+				try {
+					
+					World world = player.getWorld();
+					int x = Integer.parseInt(args[0]);
+					int z = Integer.parseInt(args[1]);
+			        int y = world.getHighestBlockAt(x, z).getY();
+			        
+			        
+			        
+					Location loc = new Location(world, x, y, z);
+					
+					int cycleY = 255;
+					
+					while (cycleY > loc.getY()) {
+						cycleY = cycleY - 1;
+						Location cycleLoc = new Location(world, x, cycleY, z);
+						world.spawnParticle(Particle.SMOKE_NORMAL, cycleLoc, 2);
+					}
+					
+					if (cycleY == loc.getY()) {
+						world.createExplosion(loc, 15, true);
+						world.createExplosion(loc, 15, true);
+						world.createExplosion(loc, 15, true);
+						world.createExplosion(loc, 15, true);
+						world.createExplosion(loc, 15, true);
+						world.createExplosion(loc, 15, true);
+						world.createExplosion(loc, 15, true);
+						player.sendMessage("Rocket blow up!");
+						return true;
+					}
+					
+					
+							
+							
+			    } catch (final NumberFormatException e) {
+			        return false;
+			    }
+				
+				
+			}
+			return true;
+		}
+		//If this has happened the function will return true. 
 	        // If this hasn't happened the value of false will be returned.
 		return false; 
 	}
