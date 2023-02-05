@@ -60,7 +60,7 @@ public final class main extends JavaPlugin {
 			} else {
 				Player player = (Player) sender;
 				
-				EconomyResponse r = econ.withdrawPlayer(player, (double) getConfig().get("cost",100000.00));
+				EconomyResponse r = econ.withdrawPlayer(player, 18);
 						
 				if(r.transactionSuccess()) {
 					
