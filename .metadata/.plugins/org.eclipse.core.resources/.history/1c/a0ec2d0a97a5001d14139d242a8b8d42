@@ -129,14 +129,7 @@ public final class main extends JavaPlugin {
 					int cycleY = 255;
 					
 					while (cycleY > loc.getY()) {
-						try {
-							  Thread.sleep(1000);
-						} catch (InterruptedException e) {
-							  Thread.currentThread().interrupt();
-						
-						}
-						
-						
+						TimeUnit.SECONDS.sleep(1);
 						cycleY = cycleY - 1;
 						Location cycleLoc = new Location(world, x, cycleY, z);
 						world.spawnParticle(Particle.SMOKE_NORMAL, cycleLoc, 2);
