@@ -89,11 +89,11 @@ public final class main extends JavaPlugin {
 			} else {
 				Player player = (Player) sender;
 				
-				if (args.length > 2) {
+				if (args.length > 1) {
 			        sender.sendMessage("Too many arguments!");
 			        return false;
 			    } 
-			    if (args.length < 2) {
+			    if (args.length < 1) {
 			        sender.sendMessage("Not enough arguments!");
 			        return false;
 			    }
