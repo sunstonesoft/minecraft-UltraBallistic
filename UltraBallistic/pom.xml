@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sunstonesoft.mc</groupId>
   <artifactId>UltraBallistic</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2</version>
   <build>
      <plugins>
          <plugin>
@@ -24,7 +24,12 @@
         <id>jitpack.io</id>
         <url>https://jitpack.io</url>
     </repository>
+    <repository>
+			<id>glaremasters-repo</id>
+			<url>https://repo.glaremasters.me/repository/towny/</url>
+		</repository>
    </repositories>
+   
   <dependencies>
        <dependency>
            <groupId>org.spigotmc</groupId>
@@ -39,5 +44,11 @@
         <version>1.7</version>
         <scope>provided</scope>
     </dependency>
+    <dependency>
+			<groupId>com.palmergames.bukkit.towny</groupId>
+			<artifactId>towny</artifactId>
+			<version>0.98.3.0</version>
+			<scope>provided</scope>
+		</dependency>
    </dependencies>
 </project>

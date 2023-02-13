@@ -4,4 +4,13 @@
     <fullyQualifiedTypeName name="org.bukkit.World"/>
     <fullyQualifiedTypeName name="org.bukkit.Particle"/>
     <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+    <fullyQualifiedTypeName name="com.palmergames.bukkit.towny.Towny"/>
+    <fullyQualifiedTypeName name="com.palmergames.bukkit.towny.object.Town"/>
+    <fullyQualifiedTypeName name="com.palmergames.bukkit.towny.exceptions.NotRegisteredException"/>
+    <fullyQualifiedTypeName name="com.palmergames.bukkit.towny.object.Resident"/>
+    <fullyQualifiedTypeName name="com.palmergames.bukkit.towny.TownyUniverse"/>
+    <fullyQualifiedTypeName name="com.palmergames.bukkit.towny.object.Nation"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="org.bukkit.scheduler.BukkitRunnable"/>
 </qualifiedTypeNameHistroy>
